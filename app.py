@@ -1,0 +1,1 @@
+Internal Storage → Pydroid3 → files → <your project>
