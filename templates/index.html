@@ -1,1 +1,22 @@
 templates/index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marketplace</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Marketplace</h1>
+    <a href="{{ url_for('add_product') }}">Add a Product</a>
+    <hr>
+    <ul>
+        {% for product in products %}
+            <li>
+                <a href="{{ url_for('product', id=product.id) }}">
+                    {{ product.title }} – {{ product.price }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
